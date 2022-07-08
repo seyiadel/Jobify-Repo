@@ -1,1 +1,1 @@
-web: gunicorn quikhire.wsgi
+web: gunicorn quikhire.wsgi --log-file-
