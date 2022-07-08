@@ -1,1 +1,0 @@
-web: gunicorn quikhire.wsgi --log-file-
