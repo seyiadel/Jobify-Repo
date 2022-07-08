@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn quikhire.wsgi
+web: gunicorn quikhire.wsgi
