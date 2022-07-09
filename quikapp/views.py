@@ -65,6 +65,7 @@ def landingpage(request):
 
 @login_required(login_url="login")
 def profile(request):
+    userinfo=UserProfile.objects.get(user=request.user)
     if request.method =="POST":
         owner=request.user.id
         talent=request.POST['profession']
@@ -73,9 +74,18 @@ def profile(request):
         skills=request.POST['skill']
         portfolio_link=request.POST.get('portfolio')
 
-        userinfo=UserProfile.objects.update( id_user=owner, user_location=user_location, talent=talent, user_bio=user_bio, skills=skills, portfolio_link=portfolio_link)
+        userinfo.owner=owner
+        userinfo.talent = talent
+        userinfo.user_location=user_location
+        userinfo.user_bio=user_bio
+        userinfo.skills=skills
+        userinfo.portfolio_link=portfolio_link
+        userinfo.save()
+
+
+        """userinfo=UserProfile.objects.update( id_user=owner, user_location=user_location, talent=talent, user_bio=user_bio, skills=skills, portfolio_link=portfolio_link)"""
         return redirect("home")
-    return render(request, 'profile.html',)
+    return render(request, 'profile.html', {})
 
 @login_required(login_url="login")
 def loggedout(request):

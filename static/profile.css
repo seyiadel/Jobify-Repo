@@ -131,7 +131,7 @@ body {
     width: 98%;
     font-size: 22px;
     color: black;
-    cursor: no-drop;
+    cursor: pointer;
     margin-top: 50px;
     margin-bottom: 70px;
 }
