@@ -92,4 +92,7 @@ def loggedout(request):
     logout(request)
     return redirect('login')
 
-    
+def search(request):
+    query=request.GET.get('query','')
+    jobpost=addJob.objects.filter(title__icontains=query)
+    return render(request, 'search.html',{'jobpost':jobpost, 'query':query})
