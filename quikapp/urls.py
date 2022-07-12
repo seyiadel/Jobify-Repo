@@ -1,6 +1,7 @@
 from django.urls import path 
 from quikapp import views
 urlpatterns = [
+    path('search/', views.search, name='search'),
    path('logout/', views.loggedout, name='logout'),
     path('', views.LoginView, name='login'),
     path('profile/', views.profile, name= 'profile'),

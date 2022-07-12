@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
-
+from django.db.models import Q 
 from django.contrib.auth  import get_user_model, authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from formapp.models import addJob
@@ -94,5 +94,5 @@ def loggedout(request):
 
 def search(request):
     query=request.GET.get('query','')
-    jobpost=addJob.objects.filter(title__icontains=query)
+    jobpost=addJob.objects.filter(Q(title__icontains=query))
     return render(request, 'search.html',{'jobpost':jobpost, 'query':query})

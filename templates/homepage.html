@@ -37,7 +37,11 @@
             </ul>
         </div>
         <div class="nav_searchBar">
-            <input type="text" class="nav_input nav_input_icon" placeholder="Search">
+            <form method="get" action="{%url 'search' %}">
+                <div class="nav_searchBar">
+                    <input type="text" name="query" class="nav_input nav_input_icon" placeholder="Search">
+                </div>
+            </form>
         </div>
     </nav>
     <section class="init-body">
@@ -81,7 +85,11 @@
             <p class="menu-close">X</p>
             <ul>
                 <div class="menu_searchBar">
-                    <input type="search" class="nav_input nav_input_icon" placeholder="Search">
+                    <form method="get" action="{% url 'search' %}">
+                        <div class="nav_searchBar">
+                            <input type="text" name="query" class="nav_input nav_input_icon" placeholder="Search">
+                        </div>
+                    </form>
                 </div>
                 <li><a href="{%url 'home'%}">Home</a></li>
                 <li class="profile_mob">Profile</li>
