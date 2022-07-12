@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../static/edit.css"> -->
+    <link rel="stylesheet" href="../static/edit.css">
     <link rel="stylesheet" href="{% static 'edit.css' %}">
     <title>Post Jobs</title>
 </head>
@@ -45,29 +45,32 @@
             <!-- <div class="profile_img">
                 <img src="../static/img/andre-benz-qJfznuTMAYA-unsplash.jpg">
             </div> -->
-            <h3 class="profile_name">{{user.first_name}} {{user.last_name}}</h3>
+            <br>
+            <h1 class="profile_name">{{user.first_name}} {{user.last_name}}</h1>
             <h4 class="profile_talent">{{user_profile.talent}}</h4>
             <h5 class="profile_location">{{user_profile.user_location}}</h5>
             <div class="divided-line"></div>
             <div class="profile_bio">
-                <h3 class="profile_name">Bio</h3>
-                <h5 class="profile_bio">{{user.user_bio}}</h5>
+                <h3 class="profile_name">Bio:</h3>
+                <ul class="profile_bio">
+                    <li>{{user_profile.user_bio}}</li>
+                </ul>
             </div>
             <div class="divided-line"></div>
             <div class="profile_skills">
-                <h3 class="profile_name">Skills</h3>
+                <h3 class="profile_name">Skills:</h3>
                 <ul class="profile_bio">
                     <li>{{user_profile.skills}}</li>
                 </ul>
             </div>
             <div class="divided-line"></div>
             <div class="profile_portfolio">
-                <h3 class="profile_name">Portfolio</h3>
+                <h3 class="profile_name">Portfolio:</h3>
                 <p class="port_link"><a href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
             </div>
             <div class="divided-line"></div>
             <div class="profile_contact">
-                <h3 class="profile_name">Email</h3>
+                <h3 class="profile_name">Email:</h3>
                 <ul class="profile_bio">
                     <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
 
@@ -76,10 +79,10 @@
         </section>
         <section class="menu">
             <p class="menu-close">X</p>
-            <div class="menu_searchBar">
-                <input type="search" class="nav_input nav_input_icon" placeholder="Search">
-            </div>
             <ul>
+                <div class="menu_searchBar">
+                    <input type="search" class="nav_input nav_input_icon" placeholder="Search">
+                </div>
                 <li><a href="{%url 'home'%}">Home</a></li>
                 <li class="profile_mob">Profile</li>
                 <li><strong><a href="{%url 'edit-job'%}">Post Jobs</a></strong></li>
@@ -89,42 +92,43 @@
             <div class="menu-list">
 
             </div>
-            <section class="profile_mobile">
-                <p class="closeMobile">X</p>
-                <!-- <div class="profile_mobile_img">
+        </section>
+        <section class="profile_mobile">
+            <p class="closeMobile">X</p>
+            <!-- <div class="profile_mobile_img">
                     <img src="../static/img/andre-benz-qJfznuTMAYA-unsplash.jpg">
                 </div> -->
-                <h3 class="profile_mobile_name">{{user.first_name}} {{user.last_name}}</h3>
-                <h4 class="profile_mobile_talent">{{user_profile.talent}}</h4>
-                <h5 class="profile_mobile_location">{{user_profile.user_location}}</h5>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_bio">
-                    <h3 class="profile_mobile_skills">Bio</h3>
-                    <h5 class="profile_mobile_bio">{{user_profile.user_bio}}</h5>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_skills">
-                    <h3 class="profile_mobile_name">Skills</h3>
-                    <ul class="profile_mobile_bio">
-                        <li>{{user_profile.skills}}</li>
-                    </ul>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_portfolio">
-                    <h3 class="profile_mobile_name">Portfolio</h3>
-                    <p class="port_mobile_link"><a
-                            href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_contact">
-                    <h3 class="profile_mobile_name">Email</h3>
-                    <ul class="profile_mobile_bio">
-                        <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
-
-                    </ul>
-                </div>
-            </section>
+            <h1 class="profile_mobile_name">{{user.first_name}} {{user.last_name}}</h1>
+            <h4 class="profile_mobile_talent">{{user_profile.talent}}</h4>
+            <h5 class="profile_mobile_location">{{user_profile.user_location}}</h5>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_skills">
+                <h3 class="profile_mobile_name">Bio:</h3>
+                <ul class="profile_mobile_bio">
+                    <li>{{user_profile.user_bio}}</li>
+                </ul>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_skills">
+                <h3 class="profile_mobile_name">Skills:</h3>
+                <ul class="profile_mobile_bio">
+                    <li>{{user_profile.skills}}</li>
+                </ul>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_portfolio">
+                <h3 class="profile_mobile_name">Portfolio:</h3>
+                <p class="port_mobile_link"><a
+                        href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_contact">
+                <h3 class="profile_mobile_name">Email:</h3>
+                <ul class="profile_mobile_bio">
+                    <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
+                </ul>
         </section>
+        <!-- </section> -->
         <section class="main_body">
             <div class="main_body_title">
                 <p>Hire Creatives</p>
@@ -263,7 +267,7 @@
 
         </div>
     </footer>
-    <!-- <script src="../static/home.js"></script> -->
+    <script src="../static/home.js"></script>
     <script src="{% static 'home.js' %}"></script>
 </body>
 

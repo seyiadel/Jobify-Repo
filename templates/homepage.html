@@ -51,26 +51,26 @@
             <h5 class="profile_location">{{user_profile.user_location}}</h5>
             <div class="divided-line"></div>
             <div class="profile_bio">
-                <h3 class="profile_name">Bio</h3>
+                <h3 class="profile_name">Bio:</h3>
                 <ul class="profile_bio">
                     <li>{{user_profile.user_bio}}</li>
                 </ul>
             </div>
             <div class="divided-line"></div>
             <div class="profile_skills">
-                <h3 class="profile_name">Skills</h3>
+                <h3 class="profile_name">Skills:</h3>
                 <ul class="profile_bio">
                     <li>{{user_profile.skills}}</li>
                 </ul>
             </div>
             <div class="divided-line"></div>
             <div class="profile_portfolio">
-                <h3 class="profile_name">Portfolio</h3>
+                <h3 class="profile_name">Portfolio:</h3>
                 <p class="port_link"><a href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
             </div>
             <div class="divided-line"></div>
             <div class="profile_contact">
-                <h3 class="profile_name">Email</h3>
+                <h3 class="profile_name">Email:</h3>
                 <ul class="profile_bio">
                     <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
 
@@ -79,10 +79,10 @@
         </section>
         <section class="menu">
             <p class="menu-close">X</p>
-            <div class="menu_searchBar">
-                <input type="search" class="nav_input nav_input_icon" placeholder="Search">
-            </div>
             <ul>
+                <div class="menu_searchBar">
+                    <input type="search" class="nav_input nav_input_icon" placeholder="Search">
+                </div>
                 <li><a href="{%url 'home'%}">Home</a></li>
                 <li class="profile_mob">Profile</li>
                 <li><strong><a href="{%url 'edit-job'%}">Post Jobs</a></strong></li>
@@ -92,41 +92,44 @@
             <div class="menu-list">
 
             </div>
-            <section class="profile_mobile">
-                <p class="closeMobile">X</p>
-                <!-- <div class="profile_mobile_img">
+        </section>
+
+        <section class="profile_mobile">
+            <p class="closeMobile">X</p>
+            <!-- <div class="profile_mobile_img">
                     <img src="../static/img/andre-benz-qJfznuTMAYA-unsplash.jpg">
                 </div> -->
-                <h1 class="profile_mobile_name">{{user.first_name}} {{user.last_name}}</h1>
-                <h4 class="profile_mobile_talent">{{user_profile.talent}}</h4>
-                <h5 class="profile_mobile_location">{{user_profile.user_location}}</h5>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_skills">
-                    <h3 class="profile_mobile_name">Bio</h3>
-                    <ul class="profile_mobile_bio">
-                        <li>{{user_profile.user_bio}}</li>
-                    </ul>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_skills">
-                    <h3 class="profile_mobile_name">Skills</h3>
-                    <ul class="profile_mobile_bio">
-                        <li>{{user_profile.skills}}</li>
-                    </ul>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_portfolio">
-                    <h3 class="profile_mobile_name">Portfolio</h3>
-                    <p class="port_mobile_link"><a href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
-                </div>
-                <div class="divided-line"></div>
-                <div class="profile_mobile_contact">
-                    <h3 class="profile_mobile_name">Email</h3>
-                    <ul class="profile_mobile_bio">
-                        <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
-                    </ul>
-            </section>
+            <h1 class="profile_mobile_name">{{user.first_name}} {{user.last_name}}</h1>
+            <h4 class="profile_mobile_talent">{{user_profile.talent}}</h4>
+            <h5 class="profile_mobile_location">{{user_profile.user_location}}</h5>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_skills">
+                <h3 class="profile_mobile_name">Bio:</h3>
+                <ul class="profile_mobile_bio">
+                    <li>{{user_profile.user_bio}}</li>
+                </ul>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_skills">
+                <h3 class="profile_mobile_name">Skills:</h3>
+                <ul class="profile_mobile_bio">
+                    <li>{{user_profile.skills}}</li>
+                </ul>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_portfolio">
+                <h3 class="profile_mobile_name">Portfolio:</h3>
+                <p class="port_mobile_link"><a
+                        href="{{user_profile.portfolio_link}}">{{user_profile.portfolio_link}}</a></p>
+            </div>
+            <div class="divided-line"></div>
+            <div class="profile_mobile_contact">
+                <h3 class="profile_mobile_name">Email:</h3>
+                <ul class="profile_mobile_bio">
+                    <li><a href="mailto:{{user.username}}">{{user.username}}</a></li>
+                </ul>
         </section>
+
         <section class="main_body">
             <div class="main_body_title">
                 <p>Vacancies according to your skills</p>
@@ -148,39 +151,14 @@
                 </div>
                 <div class="job_details_more">
                     <div class="job_req">
-                        <h1>Budget : {{job.salary}}</h1>
-                        <h1>{{job.job_type}}</h1>
-                        <h1>{{job.experience}}</h1>
+                        <h1>Budget : ₦{{job.salary}}</h1>
+                        <h1>Job Type: {{job.job_type}}</h1>
+                        <h1>Estimated Salary: {{job.experience}}</h1>
                     </div>
                     <button><a href="mailto:{{job.contact}}">Apply Now</a></button>
                 </div>
             </div>
             {% endfor %}
-
-
-            <div class="main_body_jobs">
-                <div class="main_body_jobs_head">
-                    <p>Carpenter group of companys <span>- posted 5min ago</span></p>
-                    <p class="location">Ikeja, Lagos</p>
-                </div>
-                <div class="divided-line"></div>
-                <div class="job_details">
-                    <h1>NFT website design</h1>
-                    <p>We are looking to employ group of competent  designers to build our latest NFT wesite and
-                        we
-                        are also looking to apply young talent for internship vacancy. Send your resume and portfolio to
-                        us
-                        throung our mail on our profile.</p>
-                </div>
-                <div class="job_details_more">
-                    <div class="job_req">
-                        <h1>Budget : $500</h1>
-                        <h1>Remote</h1>
-                        <h1>Entry levels & beginners</h1>
-                    </div>
-                    <button><a href="mailto:name@mail.com">Apply Now</a></button>
-                </div>
-            </div>
         </section>
     </section>
     <footer>
