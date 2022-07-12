@@ -163,9 +163,16 @@ nav {
     background: #EBEBEB;
     box-shadow: 0px 4px 4px rgba(30, 30, 30, 0.1);
     border-radius: 8px;
+    border: 0.5px solid #EBEBEB;
 }
-
-.profile_bio li a {
+.profile .profile_contact .profile_bio li{
+    margin-top: 15px;
+    background: #EBEBEB;
+    box-shadow: 0px 4px 4px rgba(30, 30, 30, 0.1);
+    border-radius: 8px;
+    border: 0.5px solid #EBEBEB;
+}
+ .profile_bio li a {
     text-decoration: none;
     color: #8325B0;
 }
@@ -406,7 +413,7 @@ footer {
     .menu {
         position: fixed;
         width: 0;
-        height: 60%;
+        height: 100%;
         right: 0;
         top: 0;
         margin: auto;
@@ -478,7 +485,7 @@ footer {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         color: rgb(158, 158, 158);
-        font-size: 55px;
+        font-size: 35px;
     }
 
     .menu-close:hover {
@@ -557,7 +564,7 @@ footer {
         font-size: 24px;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 52px;
+        /* margin-bottom: 22px; */
     }
     
     .profile_mobile_talent {
@@ -592,6 +599,10 @@ footer {
     .profile_mobile_bio li a {
         text-decoration: none;
         color: #8325B0;
+        font-size: 20px;
+    }
+    .profile_mobile_skills{
+        padding: 0px;
     }
     .profile_mobile_skills ul li{
         color: black;
@@ -603,11 +614,14 @@ footer {
     .port_mobile_link {
         text-align: center;
     }
+    .menu .profile_mobile .profile_mobile_contact ul li a{
+        color: black;
+    }
     .closeMobile{
         position: absolute;
         top: 0;
         right: 0;
-        font-size: 65px;
+        font-size: 35px;
     }
 }
 
@@ -709,16 +723,15 @@ footer {
         height: 100px;
         /* height: 100%; */
     }
-    
+
     .profile_mobile_name {
-        font-size: 16px;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 52px;
+        margin-bottom: 12px;
     }
     
     .profile_mobile_talent {
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 700;
         text-align: center;
         margin-bottom: 6px;
@@ -739,7 +752,9 @@ footer {
         font-size: 12px;
         padding: 0px 10px;
     }
-    
+    /* .profile_mobile_skills .profile_mobile_bio{
+        margin-bottom: 0px;
+    } */
     .profile_mobile_bio li {
         padding: 7px;
         list-style: none;
@@ -749,6 +764,16 @@ footer {
     .profile_mobile_bio li a {
         text-decoration: none;
         color: #8325B0;
+    }
+    .profile_mobile_skills .profile_mobile_bio li{
+        font-size: 20px;
+
+        padding: 0px;
+    }
+    .profile_mobile_contact .profile_mobile_bio li{
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 0px;
     }
     .profile_mobile_skills ul li{
         color: black;
@@ -764,7 +789,7 @@ footer {
         position: absolute;
         top: 0;
         right: 0;
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 @media screen and (max-width: 390px){

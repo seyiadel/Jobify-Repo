@@ -20,7 +20,7 @@ def LoginView(request):
             login(request, user)
             return redirect('home')
         else:
-            #messages.error(request,"Please Sign up, you have no account")
+            # messages.error(request,"Please Sign up, you have no account")
             return redirect('signup')
     else:
         return render(request, 'login.html')
