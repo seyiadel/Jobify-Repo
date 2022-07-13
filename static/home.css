@@ -17,6 +17,9 @@ body {
 .hamburger-icon {
     display: none;
 }
+.mob_searchIcon{
+    display: none;
+}
 
 nav {
     /* position: fixed; */
@@ -365,6 +368,17 @@ footer {
     font-size: 16px;
     font-weight: 400;
 }
+.nav_mobile_searchBar{
+    display: none;
+}
+.empty{
+    align-items: center;
+}
+.empty svg{
+    align-self: center;
+    width: 50%;
+    height: 50%;
+}
 
 @media screen and (max-width: 912px) {
     .main_body{
@@ -376,11 +390,29 @@ footer {
     .nav_searchBar {
         display: none;
     }
+    .nav_mobile_searchBar {
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+  .nav_mobile_searchBar p{
+      font-size: 35px;
+  }
+    .nav_mobile_searchBar_Input input {
+        border-radius: 8px;
+        padding: 13px 15px;
+        width: 288px;
+        border: 0.5px solid #1E1E1E;
+    }
+    
+    .nav_mobile_searchBar input:focus {
+        outline: none;
+        border: 1px solid #8325B0;
+    }
     .goals_links svg{
         width: 150px;
     }
     .menu_searchBar input {
-        border-radius: 8px;
+        border-radius: 4px;
         padding: 13px 15px;
         /* width: 288px; */
         width: 100%;
@@ -408,6 +440,22 @@ footer {
         background-color: black;
         height: 4px;
         transition: all 0.4s ease-in-out;
+    }
+
+    .mob_searchIcon{
+        display: block;
+    }
+
+    .mob_searchIcon svg{
+       width: 20px;
+       height: 20px;
+    }
+
+    .nav_init{
+        width: 35%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
     }
 
     .menu {
@@ -790,6 +838,21 @@ footer {
         top: 0;
         right: 0;
         font-size: 35px;
+    }
+    .nav_mobile_searchBar p{
+        font-size: 25px;
+    }
+      .nav_mobile_searchBar_Input input {
+          border-radius: 8px;
+          padding: 13px 15px;
+          width: 208px;
+          border: 0.5px solid #1E1E1E;
+      }
+      .nav_init{
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
     }
 }
 @media screen and (max-width: 390px){

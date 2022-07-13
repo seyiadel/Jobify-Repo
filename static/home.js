@@ -6,11 +6,14 @@ let links = document.querySelector('.links_quick')
 let openMobile = document.querySelector('.profile_mobile')
 let profile = document.querySelector('.profile_mob')
 let closeMobile = document.querySelector('.closeMobile')
+let searchIcon = document.querySelector('.svg-search')
+let searchInput = document.querySelector('.nav_mobile_searchBar')
+let navInit = document.querySelector('.nav_init')
+let closeSearch = document.querySelector('.close_search')
 
 // let ul = document.getElementsByClassName("main_body_jobs");
 // let li = ul.querySelectorAll('.main_body_jobs p')
 // const listArray = Array.from(li);
-
 
 openMenu.addEventListener('click', () => {
     menu.style.width = '50vw'
@@ -29,6 +32,20 @@ openMenu.addEventListener('click', () => {
   closeMobile.addEventListener('click', () => {
     openMobile.style.width = '0%'
   })
+
+  closeSearch.addEventListener('click', () => {
+    searchInput.style.display = 'none'
+    navInit.style.display = 'flex'
+    openMenu.style.display = 'block'
+  })
+
+  searchIcon.addEventListener('click', () => {
+    searchInput.style.display = 'flex'
+    searchInput.style.justifyContent = "space-between"
+    navInit.style.display = 'none'
+    openMenu.style.display = 'none'
+  })
+  
   
 
   // const filterUsers = (event) => {
