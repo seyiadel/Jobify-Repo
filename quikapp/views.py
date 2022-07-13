@@ -93,6 +93,7 @@ def loggedout(request):
     return redirect('login')
 
 def search(request):
+    user_profile=UserProfile.objects.get(user=request.user)
     query=request.GET.get('query','')
-    jobpost=addJob.objects.filter(Q(title__icontains=query))
-    return render(request, 'search.html',{'jobpost':jobpost, 'query':query})
+    jobpost=addJob.objects.filter(Q(title__icontains=query) | Q(description__icontains=query)|Q(requirement__icontains=query)|Q(salary__icontains=query)|Q(experience__icontains=query)|Q(job_type__icontains=query)|Q(location__icontains=query))
+    return render(request, 'search.html',{'jobpost':jobpost, 'query':query, 'user_profile':user_profile})
